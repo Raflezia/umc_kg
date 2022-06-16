@@ -48,7 +48,7 @@ const CoursesDetails = () => {
         })
             .then(data => {
                 refreshPage()
-                toast.success('EEEEEEEE')
+                toast.success('Заявка отправлена')
             }).catch(error => {
             console.log(error)
         })
@@ -98,7 +98,7 @@ const CoursesDetails = () => {
                                                 activeCour ? <div>
                                                     {
                                                         paid ? "" : <button className="cour--box--head--titles--btn"
-                                                        >Курс на расмотрение администратора</button>
+                                                        >Курс на рассмотрении у  администратора</button>
                                                     }
                                                 </div> : <button className="cour--box--head--titles--btn"
                                                                  onClick={() => post()}
