@@ -104,7 +104,7 @@ const Person = () => {
         publicApi.delete(`/pasport-updatedelete/${ImgPassword.id}`)
             .then(data => {
                 refreshPage()
-                toast("deleted")
+                toast("Успешное удаление")
                 console.log(data)
             })
     }
@@ -423,14 +423,14 @@ const Person = () => {
                                 </div>
                             </div>
                             {
-                                <div><p className='my-courses--p2'>На рассмотрении у администратора : </p>
+                                <div><p className='my-courses--p2'></p>
                                     <div className='my-courses--business'
                                          onClick={() => {
                                              navigate(`/person/notActivated`)
                                              refreshPage()
                                          }}
                                     >
-                                        <p className='my-courses--business--p'>Курсы на рассмотрении у администратора : </p>
+                                        <p className='my-courses--business--p'>Курсы на рассмотрении у администратора </p>
                                         <FontAwesomeIcon className='my-courses--business--icon'
                                                          icon={faArrowRightLong}/>
                                     </div>
