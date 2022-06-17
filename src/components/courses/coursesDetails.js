@@ -174,7 +174,7 @@ const CoursesDetails = () => {
                                                             className="cour--box--test--btn">Тест
                                                         </button>
                                                     </NavLink> :
-                                                    <button className="cour--box--test--btn">!!!</button>
+                                                    <button className="cour--box--test--btn">Тестирование по данному курсу было пройдено</button>
                                             }
                                         </div>
                                     </div> : ""

@@ -25,15 +25,15 @@ const UpdatePosition = ({poModal,setPoModal}) => {
                 position:comment,
             }).then(data => {
                 if (data.data.position.length === 0){
-                    toast.error("Это поле не может быть пустым.")}
+                    toast.error("Это поле не может быть пустым")}
                 else {
                     dispatch(getPosition())
                     setPoModal(false)
-                    toast.success("Успешно ")
+                    toast.success("Успешное обновление ")
                 }
                 console.log(data)
             }).catch(error => {
-                toast.error("error")
+                toast.error("Ошибка при обновлении")
             })
         }
     }
@@ -41,7 +41,7 @@ const UpdatePosition = ({poModal,setPoModal}) => {
     return (
         <div  className={ poModal ? "update active   " : "update"}>
             <div  className={ poModal ? "update--position active  " : "update--position"}>
-                <p className='update--position--title' >Изменение должность</p>
+                <p className='update--position--title' >Изменение должности</p>
                 <label>Должность*</label>
                 <form
                     onSubmit={update}
@@ -56,7 +56,7 @@ const UpdatePosition = ({poModal,setPoModal}) => {
                             type='button'
                             className='update--position--form--btns--btn1 mx-2.5'
                         onClick={() => setPoModal(false)}
-                        >отменить</button>
+                        >Отменить</button>
                         <button
                             type='submit'
                             // onClick={btn}

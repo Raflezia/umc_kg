@@ -32,20 +32,20 @@ const UpdatePhone = ({phoneModal,setPhoneModal,persons, handleChangeUser}) => {
         }
 
         console.log(obj)
-        fetch("https://djangorestapp.herokuapp.com/users/me/", options)
+        fetch("https://umckg.herokuapp.com/users/me/", options)
             .then(res => res.json())
             .then(data => {
                 if (data.phone_number[0] === 'Введен некорректный номер телефона.'){
-                    toast.error('Введен некорректный номер телефона.')
+                    toast.error('Введен некорректный номер телефона')
                 } else if (data.phone_number.length === 0){
-                    toast.error("Это поле не может быть пустым.")}
+                    toast.error("Это поле не может быть пустым")}
                 else {
                     dispatch(getUser())
                     setPhoneModal(false)
-                    toast.success("Успешно ")
+                    toast.success("Успешное обновление ")
                 }
             }).catch(error => {
-                toast.error("error")
+                toast.error("Ошибка при обновлении")
         })
     }
     return (
@@ -68,7 +68,7 @@ const UpdatePhone = ({phoneModal,setPhoneModal,persons, handleChangeUser}) => {
                        />
                    </div>
 
-                    <label className='phone--content--text'>Укажите новый номер*</label>
+                    <label className='phone--content--text'>Укажите новый номер телефона*</label>
                 <div className='phone--content--phone'>
                     <input
                         onChange={e => setPhone(e.target.value)}
@@ -80,7 +80,7 @@ const UpdatePhone = ({phoneModal,setPhoneModal,persons, handleChangeUser}) => {
                 <div className='modal--email--form--btns'>
                     <button type='button' className='modal--email--form--btns--btn1 mx-2.5'
                             onClick={() => setPhoneModal(false)}
-                    >отменить</button>
+                    >Отменить</button>
                     <button
                             className='modal--email--form--btns--btn2 mx-2.5'
                     >Сохранить</button>

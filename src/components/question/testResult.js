@@ -41,8 +41,8 @@ const TestResult = () => {
                                         style={{marginLeft:"20px", padding:"0 12px",background: el.score > 60 ? "green" : "red"}}></span></p>
                                     <p className="test--content--texts__text">{el.score} : <span className="test--content--texts__text--decor">%</span></p>
                                     <p className="test--content--texts__text">{el.fail + el.point}: <span className="test--content--texts__text--decor">Количество вопросов</span></p>
-                                    <p className="test--content--texts__text">{el.point} : <span className="test--content--texts__text--decor">Правилные ответы</span> </p>
-                                    <p className="test--content--texts__text">{el.fail} : <span className="test--content--texts__text--decor">Неправилные ответы</span></p>
+                                    <p className="test--content--texts__text">{el.point} : <span className="test--content--texts__text--decor">Правильные ответы</span> </p>
+                                    <p className="test--content--texts__text">{el.fail} : <span className="test--content--texts__text--decor">Неправильные ответы</span></p>
                                     <p className="test--content--texts__text" dangerouslySetInnerHTML={{__html:el.created_date}}/> : <span className="test--content--texts__text--decor">Дата сдачаи теста</span>
                                 </div>
                             ))

@@ -30,18 +30,18 @@ const UpdateName = ({modal,setModal,handleChangeUser}) => {
                 "Authorization": `Bearer ${access}` },
             body: JSON.stringify(obj)
         }
-        fetch(`https://djangorestapp.herokuapp.com/users/me/`, options )
+        fetch(`https://umckg.herokuapp.com/users/me/`, options )
             .then(res => res.json())
             .then(data => {
-                if (data.name[0] === 'Это поле не может быть пустым.'){
-                    toast.error("Это поле не может быть пустым.")
+                if (data.name[0] === 'Это поле не может быть пустым'){
+                    toast.error("Это поле не может быть пустым")
                 } else {
                     dispatch(getUser())
                     setModal(false)
-                    toast.success("Успешно ")
+                    toast.success("Успешно обновление")
                 }
             }).catch(error => {
-            toast.error("error")
+            toast.error("Ошибка")
                 // toast.error(error.data.name)
         })
 
@@ -64,7 +64,7 @@ const UpdateName = ({modal,setModal,handleChangeUser}) => {
                     <div className='modal--name--form--btns'>
                         <button type='button' className='modal--name--form--btns--btn1 mx-2.5'
                                 onClick={() => setModal(false)}
-                        >отменить</button>
+                        >Отменить</button>
                         <button
                                 className='modal--name--form--btns--btn2 mx-2.5'
                         >Сохранить</button>

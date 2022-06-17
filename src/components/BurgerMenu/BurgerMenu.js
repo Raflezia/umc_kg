@@ -68,7 +68,7 @@ const BurgerMenu = () => {
                             </li>
 
                             <li className="border-b border-gray-400 my-8 uppercase text-white">
-                                <NavLink to="/contact">Контакт</NavLink>
+                                <NavLink to="/contact">Контакты</NavLink>
                             </li>
 
                             <li className="border-b border-gray-400 my-8 uppercase text-white">

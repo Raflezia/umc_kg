@@ -49,7 +49,7 @@ const AddPhotoPassword = ({imgPass, setImgPass}) => {
                 console.log(data, "logdata")
                 setCreateImg(data)
                 imgId(data)
-                toast.success("Успешно")
+                toast.success("Успешное добавление")
             })
             .catch(error => {
 

@@ -13,10 +13,10 @@ export default function HookForm({active, setActive}) {
     const navigate =useNavigate()
     const validationSchema = Yup.object().shape({
         name: Yup.string()
-            .required('Введите фамилия'),
+            .required('Введите ФИО'),
         phone_number: Yup.string()
-            .required('Введите телефон')
-            .min(8, 'Введите телефон'),
+            .required('Введите номер телефона')
+            .min(8, 'Введите номер телефона'),
         email:Yup.string()
             .required('Введите Email'),
         password: Yup.string()

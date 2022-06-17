@@ -25,15 +25,15 @@ const UpdateOrganization = ({orModal,setOrModal}) => {
                   organization:comment,
               }).then(data => {
                   if (data.data.organization.length === 0){
-                      toast.error("Это поле не может быть пустым.")}
+                      toast.error("Это поле не может быть пустым")}
                   else {
                       dispatch(getPosition())
                       setOrModal(false)
-                      toast.success("Успешно ")
+                      toast.success("Успешное обновление данных")
                   }
                   console.log(data)
               }).catch(error => {
-                  toast.error("error")
+                  toast.error("Ошибка при обновлении данных")
               })
           }
     }
@@ -41,7 +41,7 @@ const UpdateOrganization = ({orModal,setOrModal}) => {
     return (
         <div  className={ orModal ? "updated active  " : "updated"}>
             <div  className={ orModal ? "updated--organization active  " : "updated--organization"}>
-                <p className="updated--organization--title" >Изменение организация</p>
+                <p className="updated--organization--title" >Изменение данных об организации</p>
                 <label>Организация*</label>
                 <form
                     className="updated--organization--form"
@@ -56,7 +56,7 @@ const UpdateOrganization = ({orModal,setOrModal}) => {
                             type="button"
                             className=" updated--organization--form--btns--btn1 mx-2.5"
                             onClick={() => setOrModal(false)}
-                        >отменить</button>
+                        >Отменить</button>
                         <button
                             type='submit'
                             className="updated--organization--form--btns--btn2 mx-2.5"
