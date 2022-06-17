@@ -37,13 +37,13 @@ const TestResult = () => {
                             testResText.map(el=>(
                                 <div className="my-2 mx-2" key={el.id}>
                                     <p>{el.course_name}</p>
-                                    <p className="test--content--texts__text">{el.score > 50 ? "Тест пройден" : "Тест не пройден"} <span
-                                        style={{marginLeft:"20px", padding:"0 12px",background: el.score > 50 ? "green" : "red"}}></span></p>
+                                    <p className="test--content--texts__text">{el.score > 60 ? "Тест пройден" : "Тест не пройден"} <span
+                                        style={{marginLeft:"20px", padding:"0 12px",background: el.score > 60 ? "green" : "red"}}></span></p>
                                     <p className="test--content--texts__text">{el.score} : <span className="test--content--texts__text--decor">%</span></p>
-                                    <p className="test--content--texts__text">{el.fail + el.point}: <span className="test--content--texts__text--decor">количество вопросов</span></p>
+                                    <p className="test--content--texts__text">{el.fail + el.point}: <span className="test--content--texts__text--decor">Количество вопросов</span></p>
                                     <p className="test--content--texts__text">{el.point} : <span className="test--content--texts__text--decor">Правилные ответы</span> </p>
-                                    <p className="test--content--texts__text">{el.fail} : <span className="test--content--texts__text--decor">Не правилные ответы</span></p>
-                                    <p className="test--content--texts__text" dangerouslySetInnerHTML={{__html:el.created_date}}/> : <span className="test--content--texts__text--decor">Дата сдача теста</span>
+                                    <p className="test--content--texts__text">{el.fail} : <span className="test--content--texts__text--decor">Неправилные ответы</span></p>
+                                    <p className="test--content--texts__text" dangerouslySetInnerHTML={{__html:el.created_date}}/> : <span className="test--content--texts__text--decor">Дата сдачаи теста</span>
                                 </div>
                             ))
                         }

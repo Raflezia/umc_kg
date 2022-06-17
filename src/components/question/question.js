@@ -78,7 +78,7 @@ const Question = () => {
             )
             .then((data) => {
                 result(data);
-                toast.success("Успешно");
+                toast.success("Результаты тестирования сохранены");
             })
             .catch((e) => {
                 console.log(e);
@@ -115,13 +115,13 @@ const Question = () => {
                                 <div className="flex justify-center align-middle">
                                     <div className="pt-16">
                                         <p className="py-2">
-                                            {score}: правильных ответа  из {" "}
-                                            {elem?.choicetest?.length} вопроса/вопросов
+                                            {score} правильных ответа(ов)  из {" "}
+                                            {elem?.choicetest?.length} вопроса(ов)
                                         </p>
                                         <div>
                                             {
                                                 <p className="test--content--texts__text">
-                                                    {result() >= 50
+                                                    {result() >= 60
                                                         ? `Тест пройден ${result()} %`
                                                         : `Тест не пройден${result()} %`}{" "}
                                                     <span
@@ -129,7 +129,7 @@ const Question = () => {
                                                             marginLeft: "20px",
                                                             padding: "0 12px",
                                                             background:
-                                                                result() >= 50
+                                                                result() >= 60
                                                                     ? "green"
                                                                     : "red",
                                                         }}
@@ -172,6 +172,9 @@ const Question = () => {
                                                 <p className="font-normal text-sm text-center font-bold">
                                                     {elem.name}
                                                 </p>
+                                                <p className="text-center text-sm">
+                                                    {question?.title}
+                                                    </p>
                                                 <div className="flex justify-center w-full h-60 py-6">
                                                     {
                                                         question?.img ? <img src={`https://res.cloudinary.com/dbqgk5dfn/${question?.img}`} alt="img"
