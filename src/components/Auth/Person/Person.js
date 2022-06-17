@@ -408,7 +408,7 @@ const Person = () => {
                         />
                     </div>
                     <div className='my-courses' hidden={index !== 1}>
-                        <h3>Мои курсы</h3>
+                        <h3>       Мои курсы</h3>
                         <div>
                             <div className='my-courses--bank'
                                  onClick={() => {
