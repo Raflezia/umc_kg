@@ -43,7 +43,7 @@ const TestResult = () => {
                                     <p className="test--content--texts__text">{el.fail + el.point}: <span className="test--content--texts__text--decor">Количество вопросов</span></p>
                                     <p className="test--content--texts__text">{el.point} : <span className="test--content--texts__text--decor">Правильные ответы</span> </p>
                                     <p className="test--content--texts__text">{el.fail} : <span className="test--content--texts__text--decor">Неправильные ответы</span></p>
-                                    <p className="test--content--texts__text" dangerouslySetInnerHTML={{__html:el.created_date}}/> : <span className="test--content--texts__text--decor">Дата сдачаи теста</span>
+                                    <p className="test--content--texts__text" dangerouslySetInnerHTML={{__html:el.created_date}}/> : <span className="test--content--texts__text--decor">Дата сдачи теста</span>
                                 </div>
                             ))
                         }
