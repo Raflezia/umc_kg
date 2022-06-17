@@ -9,9 +9,9 @@ const CoursesCard = ({el}) => {
                 <div className="coursesCard--box">
                     <h1 className="coursesCard--box--title">{el.title}</h1>
                     <div className="flex align-middle">
-                        <span className="font-light text-sm">длителность курса : </span>
+                        <span className="font-light text-sm">Длителность курса : </span>
                         <p className="coursesCard--box--date ml-2"  dangerouslySetInnerHTML={{__html:el.time_work }}/>
-                        <span className="font-light text-sm"> дней</span>
+                        <span className="font-light text-sm">  дней</span>
                     </div>
                     <button className="coursesCard--box--price">{el.price}</button>
                 </div>
