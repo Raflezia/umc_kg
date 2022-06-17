@@ -55,7 +55,7 @@ const UpdatePassword = ({passwordModal,setPasswordModal}) => {
                     <input  name="password"  placeholder="Пароль"  type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
                     <div className="modal--password--form--error invalid-feedback">{errors.password?.message}</div>
                     <label className='modal--password--form--confirmPassword'>Подтвердите новый пароль</label>
-                    <input name="new_password" type="password" placeholder="Подвердить пароль" {...register('new_password')} className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`} />
+                    <input name="new_password" type="password" placeholder="Подтвердить пароль" {...register('new_password')} className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`} />
                     <div className="modal--password--form--error invalid-feedback">{errors.new_password?.message}</div>
                     <div className='modal--password--form--btns'>
                         <button type='button' className='modal--password--form--btns--btn1 mx-2.5'
