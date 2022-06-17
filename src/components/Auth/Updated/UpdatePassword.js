@@ -14,7 +14,7 @@ const UpdatePassword = ({passwordModal,setPasswordModal}) => {
             .min(6, 'Старый пароль'),
         password: Yup.string()
             .required('Введите пароль')
-            .min(6, 'Пароль должен быть не менее 4 символов'),
+            .min(6, 'Пароль должен быть не менее 8 символов'),
         new_password: Yup.string()
             .required('Введите пароль')
             .oneOf([Yup.ref('password')], 'Пароли должны совпадать')
@@ -32,10 +32,10 @@ const UpdatePassword = ({passwordModal,setPasswordModal}) => {
         }).then(data => {
             console.log(data)
             setPasswordModal(false)
-            toast.success("Успешно")
+            toast.success("Пароль изменен")
         }).catch((error) => {
            if (error.response.data.current_password){
-               toast.error( "Текщий пароль введене неверно")
+               toast.error( "Текущий пароль введен неверно")
            } else  if (error.response.data.new_password){
                toast.error(error.response.data.new_password[0])
            }
@@ -54,7 +54,7 @@ const UpdatePassword = ({passwordModal,setPasswordModal}) => {
                     <label className='modal--password--form--new-password'>Новый пароль</label>
                     <input  name="password"  placeholder="Пароль"  type="password" {...register('password')} className={`form-control ${errors.password ? 'is-invalid' : ''}`} />
                     <div className="modal--password--form--error invalid-feedback">{errors.password?.message}</div>
-                    <label className='modal--password--form--confirmPassword'>Потвердите новый пароль</label>
+                    <label className='modal--password--form--confirmPassword'>Подтвердите новый пароль</label>
                     <input name="new_password" type="password" placeholder="Подвердить пароль" {...register('new_password')} className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`} />
                     <div className="modal--password--form--error invalid-feedback">{errors.new_password?.message}</div>
                     <div className='modal--password--form--btns'>
